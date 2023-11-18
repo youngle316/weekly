@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import { Blog, allBlogs } from "contentlayer/generated";
 import { Mdx } from "@/components/mdx";
 import Comments from "./Comments";
@@ -19,15 +18,6 @@ function ArticleContent({ params }: { params: Params }) {
   return (
     <div className="px-2">
       <p className="mb-6 text-3xl">{post.title}</p>
-      <Image
-        alt={post.title}
-        src={post.cover}
-        height={0}
-        width={0}
-        sizes="100vw"
-        className="mb-5 block h-auto w-full rounded-t-md object-cover"
-        priority
-      />
       <Mdx code={post.body.code} />
       <div className="mb-16 mt-5">
         <Comments />

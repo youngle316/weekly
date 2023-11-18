@@ -8,7 +8,7 @@ export default function Header() {
   const navLink = [
     { name: "About Me", href: "https://xiaole.site" },
     { name: "GitHub", href: "https://github.com/youngle316" },
-    { name: "RSS", href: "https://xiaole.site" },
+    { name: "RSS", href: "/feed.xml" },
   ];
 
   return (
