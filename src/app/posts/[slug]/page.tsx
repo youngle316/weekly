@@ -29,18 +29,18 @@ export async function generateMetadata({
       description,
       type: "article",
       url: `${URL}/posts/${href}`,
-      images: [
-        {
-          url: cover,
-        },
-      ],
+      siteName: TITLE,
+      images: {
+        url: cover,
+      },
+      locale: "zh-CN",
     },
     twitter: {
       card: "summary_large_image",
       title: `${TITLE}${title}`,
       site: `${URL}/posts/${href}`,
       description,
-      images: [cover],
+      images: { url: cover },
     },
   };
 }

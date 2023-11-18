@@ -14,11 +14,9 @@ export const metadata: Metadata = {
     type: "website",
     url: URL,
     siteName: TITLE,
-    images: [
-      {
-        url: OGIMAGE,
-      },
-    ],
+    images: {
+      url: OGIMAGE,
+    },
     locale: "zh-CN",
   },
   twitter: {
@@ -26,7 +24,9 @@ export const metadata: Metadata = {
     title: TITLE,
     site: URL,
     description: DESC,
-    images: [OGIMAGE],
+    images: {
+      url: OGIMAGE,
+    },
   },
 };
 
