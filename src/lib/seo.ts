@@ -7,5 +7,7 @@ const OGIMAGE =
 const KEYWORDS = "xiaole,youngle316,Weekly,Blog,前端,cover-image,power-chat";
 const AUTHOR = "xiaole,youngle316";
 const HOME = "https://xiaole.site";
+const AVATAR =
+  "https://obsidian-picgo-le.oss-cn-hangzhou.aliyuncs.com/img/IMG_1225.JPG";
 
-export { TITLE, DESC, URL, OGIMAGE, KEYWORDS, AUTHOR, HOME };
+export { TITLE, DESC, URL, OGIMAGE, KEYWORDS, AUTHOR, HOME, AVATAR };

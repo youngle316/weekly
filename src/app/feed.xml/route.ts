@@ -4,7 +4,7 @@ import { allBlogs } from "contentlayer/generated";
 import { remark } from "remark";
 import remarkHtml from "remark-html";
 import remarkGfm from "remark-gfm";
-import { URL, TITLE, DESC, OGIMAGE } from "@/lib/seo";
+import { URL, TITLE, DESC, AVATAR } from "@/lib/seo";
 
 export async function GET() {
   const feed = new RSS({
@@ -13,7 +13,7 @@ export async function GET() {
     site_url: URL,
     feed_url: `${URL}/feed.xml`,
     language: "zh-CN",
-    image_url: OGIMAGE,
+    image_url: AVATAR,
   });
 
   await allBlogs
