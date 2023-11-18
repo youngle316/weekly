@@ -16,8 +16,8 @@ type Params = {
 function ArticleContent({ params }: { params: Params }) {
   const post = allBlogs.find((post) => post.href === params.slug) as Blog;
   return (
-    <>
-      <p className="mb-8 text-3xl">{post.title}</p>
+    <article className="px-2">
+      <p className="mb-6 text-3xl">{post.title}</p>
       <Image
         alt={post.title}
         src={post.cover}
@@ -28,7 +28,7 @@ function ArticleContent({ params }: { params: Params }) {
         priority
       />
       <Mdx code={post.body.code} />
-    </>
+    </article>
   );
 }
 

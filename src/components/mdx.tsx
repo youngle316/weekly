@@ -124,7 +124,7 @@ export function Mdx({ code }: MdxProps) {
   const Component = useMDXComponent(code);
 
   return (
-    <article className="prose-quoteless prose prose-zinc mx-auto mb-3 w-[28rem] md:w-full md:max-w-2xl lg:max-w-[62rem] 2xl:max-w-7xl">
+    <article className="prose-quoteless prose prose-zinc mx-auto mb-3 md:w-full md:max-w-2xl lg:max-w-[62rem] 2xl:max-w-7xl">
       <Component components={{ ...components }} />
     </article>
   );

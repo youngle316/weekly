@@ -12,7 +12,7 @@ export default function Header() {
   ];
 
   return (
-    <header className="mx-auto mb-3 w-[28rem] md:w-full md:max-w-2xl lg:max-w-[62rem] 2xl:max-w-7xl">
+    <header className="mx-auto mb-3 md:w-full md:max-w-2xl lg:max-w-[62rem] 2xl:max-w-7xl">
       <div className="mt-8 flex flex-col items-center md:items-start">
         <div className="text-4xl font-bold">
           <Link href="/" className={maFonts.className}>
@@ -24,7 +24,7 @@ export default function Header() {
           Tracing the Footsteps of the Heart
         </div>
       </div>
-      <nav className="my-3 flex justify-center gap-2 md:justify-end">
+      <nav className="my-3 flex justify-center gap-4 md:justify-end">
         {navLink.map(({ name, href }) => {
           return (
             <Link
