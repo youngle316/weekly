@@ -17,7 +17,7 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        wenkai: ['"LXGW WenKai GB Screen"', "sans-serif"],
+        wenkai: ["LXGW WenKai Screen", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
