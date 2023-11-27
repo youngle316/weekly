@@ -52,6 +52,9 @@ export default function RootLayout({
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css"
         />
+        <link rel="icon" type="image/svg+xml" href={AVATAR} />
+        <link rel="shortcut icon" href={AVATAR} />
+        <link rel="alternate icon" type="image/x-icon" href={AVATAR} />
       </head>
       <body className="font-wenkai">
         <Script
