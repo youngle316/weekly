@@ -1,7 +1,17 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
 import Header from "./Header";
-import { TITLE, DESC, OGIMAGE, URL, AUTHOR, HOME, KEYWORDS } from "@/lib/seo";
+import {
+  TITLE,
+  DESC,
+  OGIMAGE,
+  URL,
+  AUTHOR,
+  HOME,
+  KEYWORDS,
+  AVATAR,
+} from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -15,7 +25,7 @@ export const metadata: Metadata = {
     url: URL,
     siteName: TITLE,
     images: {
-      url: OGIMAGE,
+      url: AVATAR,
     },
     locale: "zh-CN",
   },
@@ -44,6 +54,11 @@ export default function RootLayout({
         />
       </head>
       <body className="font-wenkai">
+        <Script
+          strategy="afterInteractive"
+          src="https://analytics.eu.umami.is/script.js"
+          data-website-id="6f45f6df-535a-4480-8241-5d47ef997326"
+        />
         <div className="mx-auto w-full max-w-xl md:max-w-2xl lg:max-w-[62rem] 2xl:max-w-7xl">
           <Header />
           {children}
