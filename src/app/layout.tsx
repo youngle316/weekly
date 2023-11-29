@@ -57,11 +57,13 @@ export default function RootLayout({
         <link rel="alternate icon" type="image/x-icon" href={AVATAR} />
       </head>
       <body className="font-wenkai">
-        <Script
-          strategy="afterInteractive"
-          src="https://analytics.eu.umami.is/script.js"
-          data-website-id="6f45f6df-535a-4480-8241-5d47ef997326"
-        />
+        {process.env.NODE_ENV === "production" && (
+          <Script
+            strategy="afterInteractive"
+            src="https://analytics.eu.umami.is/script.js"
+            data-website-id="6f45f6df-535a-4480-8241-5d47ef997326"
+          />
+        )}
         <div className="mx-auto w-full max-w-xl md:max-w-2xl lg:max-w-[62rem] 2xl:max-w-7xl">
           <Header />
           {children}

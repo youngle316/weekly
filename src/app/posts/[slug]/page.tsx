@@ -1,6 +1,6 @@
 import { allBlogs } from "contentlayer/generated";
 import type { Metadata } from "next";
-import PostsContent from "@/components/PostsContent";
+import PostsContent from "@/app/posts/[slug]/PostsContent";
 import { AUTHOR, HOME, KEYWORDS, TITLE, URL } from "@/lib/seo";
 
 type Params = {
