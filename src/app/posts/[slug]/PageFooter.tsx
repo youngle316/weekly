@@ -13,7 +13,7 @@ function PageFooter({ post }: { post: Blog }) {
   const url = `https://github.com/youngle316/weekly/tree/main/content/${title}.md`;
 
   return (
-    <div className="flex items-center justify-between">
+    <div className="flex flex-col items-center justify-between gap-1.5 md:flex-row">
       <div>
         <span>发布日期：</span>
         <MyLink href={url} title={post.publishedAt} />
