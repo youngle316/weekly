@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import "./globals.css";
-import Header from "./Header";
 import {
   TITLE,
   DESC,
@@ -64,10 +63,7 @@ export default function RootLayout({
             data-website-id="6f45f6df-535a-4480-8241-5d47ef997326"
           />
         )}
-        <div className="">
-          {/*<Header />*/}
-          {children}
-        </div>
+        {children}
       </body>
     </html>
   );
