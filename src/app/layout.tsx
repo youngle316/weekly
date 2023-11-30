@@ -64,8 +64,8 @@ export default function RootLayout({
             data-website-id="6f45f6df-535a-4480-8241-5d47ef997326"
           />
         )}
-        <div className="mx-auto w-full max-w-xl md:max-w-2xl lg:max-w-[62rem] 2xl:max-w-7xl">
-          <Header />
+        <div className="">
+          {/*<Header />*/}
           {children}
         </div>
       </body>

@@ -1,10 +1,12 @@
 import { allBlogs } from "contentlayer/generated";
 import Image from "next/image";
 import Link from "next/link";
+import Header from "@/app/Header";
 
 export default function Home() {
   return (
-    <main>
+    <main className="mx-auto w-full max-w-xl md:max-w-2xl lg:max-w-[62rem] 2xl:max-w-7xl">
+      <Header />
       <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
         {allBlogs.map(({ title, publishedAt, summary, cover, href }) => {
           return (

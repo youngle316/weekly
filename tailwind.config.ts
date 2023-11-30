@@ -16,6 +16,9 @@ module.exports = {
       },
     },
     extend: {
+      screens: {
+        md: "800px",
+      },
       fontFamily: {
         wenkai: ["LXGW WenKai Screen", "sans-serif"],
       },
