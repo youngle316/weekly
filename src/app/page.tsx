@@ -4,11 +4,17 @@ import Link from "next/link";
 import Header from "@/app/Header";
 
 export default function Home() {
+  const blogs = allBlogs.sort((a, b) => {
+    return (
+      new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
+    );
+  });
+
   return (
     <main className="mx-auto w-full max-w-xl md:max-w-2xl lg:max-w-[62rem] 2xl:max-w-7xl">
       <Header />
       <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
-        {allBlogs.map(({ title, publishedAt, summary, cover, href }) => {
+        {blogs.map(({ title, publishedAt, summary, cover, href }) => {
           return (
             <Link
               href={`/posts/${href}`}
