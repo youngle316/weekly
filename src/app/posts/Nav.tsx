@@ -1,9 +1,8 @@
-import React, { Fragment } from "react";
+import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { allBlogs } from "contentlayer/generated";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { Separator } from "@/components/ui/separator";
 
 type Params = {
   slug: string;
@@ -30,10 +29,10 @@ function Nav({ params }: { params: Params }) {
         </Link>
       </div>
 
-      <ScrollArea className="relative mt-4 h-full overflow-hidden pl-8 pr-6">
-        <div className="p-2 pb-32">
+      <ScrollArea className="relative mt-6 h-full overflow-hidden pl-8">
+        <div className="flex flex-col gap-[10px] p-2 pb-32">
           {blogs.map(({ title, href }) => (
-            <Fragment key={title}>
+            <div key={title}>
               <Link
                 href={`/posts/${href}`}
                 className={`cursor-pointer text-lg ${
@@ -44,8 +43,8 @@ function Nav({ params }: { params: Params }) {
               >
                 {title}
               </Link>
-              <Separator className="my-1" />
-            </Fragment>
+              {/*<Separator className="my-1" />*/}
+            </div>
           ))}
         </div>
       </ScrollArea>
