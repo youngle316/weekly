@@ -11,7 +11,7 @@ export default function Home() {
   });
 
   return (
-    <main className="mx-auto w-full max-w-xl md:max-w-2xl lg:max-w-[62rem] 2xl:max-w-7xl">
+    <main className="mx-auto mb-12 w-full max-w-xl md:max-w-2xl lg:max-w-[62rem] 2xl:max-w-7xl">
       <Header />
       <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
         {blogs.map(({ title, publishedAt, summary, cover, href }) => {
