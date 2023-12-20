@@ -23,7 +23,7 @@ module.exports = {
         wenkai: ["LXGW WenKai Screen", "sans-serif"],
       },
       colors: {
-        link: "#52A9FF",
+        link: "#1f6feb",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

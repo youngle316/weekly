@@ -23,7 +23,7 @@ function Comments() {
         reactionsEnabled="1"
         emitMetadata="0"
         inputPosition="top"
-        theme={theme}
+        theme={theme === "dark" ? "dark_tritanopia" : "light_tritanopia"}
         loading="lazy"
         lang="zh-CN"
       />

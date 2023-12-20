@@ -27,7 +27,7 @@ const CustomLink = (props: any) => {
       target="_blank"
       rel="noopener noreferrer"
       {...props}
-      className="my-0 inline-flex items-center gap-1 font-semibold text-[#52A9FF] no-underline hover:no-underline"
+      className="my-0 inline-flex items-center gap-1 font-semibold text-[#1f6feb] no-underline hover:no-underline"
     >
       {props.children}
       <ArrowUpRight size={16} />
