@@ -33,13 +33,13 @@ function PageFooter({ post }: { post: Blog }) {
             blank={false}
           />
         )}
-        <span className="text-yellow-700">|</span>
+        <span className="text-link">|</span>
         {Links.map(({ href, title, blank }, index) => {
           return (
             <Fragment key={href}>
               <MyLink href={href} title={title} blank={blank} />
               {index !== Links.length - 1 && (
-                <span className="text-yellow-700">|</span>
+                <span className="text-link">|</span>
               )}
             </Fragment>
           );
@@ -61,7 +61,7 @@ const MyLink = ({
   return (
     <Link
       href={href}
-      className="primary_link no-underline"
+      className="text-link no-underline"
       target={blank ? "_blank" : "_self"}
     >
       {title}

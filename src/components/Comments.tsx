@@ -7,8 +7,11 @@ import {
   giscusCategory,
   giscusCategoryId,
 } from "@/lib/giscus";
+import { useTheme } from "next-themes";
 
 function Comments() {
+  const { theme } = useTheme();
+
   return (
     <div id="comment" className="mx-auto w-full">
       <Giscus
@@ -20,7 +23,7 @@ function Comments() {
         reactionsEnabled="1"
         emitMetadata="0"
         inputPosition="top"
-        theme="light"
+        theme={theme}
         loading="lazy"
         lang="zh-CN"
       />

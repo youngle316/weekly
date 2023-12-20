@@ -11,6 +11,7 @@ import {
   KEYWORDS,
   AVATAR,
 } from "@/lib/seo";
+import { ThemeProvider } from "@/components/theme-provider";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -63,7 +64,14 @@ export default function RootLayout({
             data-website-id="6f45f6df-535a-4480-8241-5d47ef997326"
           />
         )}
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

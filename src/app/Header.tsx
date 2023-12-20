@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { Ma_Shan_Zheng } from "next/font/google";
+import ModelToggle from "@/components/ModelToggle";
 
 const maFonts = Ma_Shan_Zheng({ subsets: ["latin"], weight: "400" });
 
@@ -20,11 +21,11 @@ export default function Header() {
           </Link>
         </div>
 
-        <div className="text-zinc-500/80">
+        <div className="text-muted-foreground">
           Tracing the Footsteps of the Heart
         </div>
       </div>
-      <nav className="my-3 flex justify-center gap-4 md:justify-end">
+      <nav className="my-3 flex items-center justify-center gap-4 md:justify-end">
         {navLink.map(({ name, href }) => {
           return (
             <Link
@@ -37,8 +38,9 @@ export default function Header() {
             </Link>
           );
         })}
+        <ModelToggle />
       </nav>
-      <div className="w-full border-[1px] border-solid border-zinc-800" />
+      <div className="mx-auto w-96 items-center border-[1px] border-solid border-zinc-800 md:w-full" />
     </header>
   );
 }

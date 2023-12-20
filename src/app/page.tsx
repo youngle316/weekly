@@ -19,7 +19,7 @@ export default function Home() {
             <Link
               href={`/posts/${href}`}
               key={title}
-              className="relative mx-auto flex w-96 flex-col justify-center gap-3 overflow-hidden rounded-b-md pb-3 shadow-md md:w-full"
+              className="relative mx-auto flex w-96 flex-col justify-center gap-3 overflow-hidden rounded-md pb-3 shadow shadow-primary/10 md:w-full"
             >
               <Image
                 alt={title}
@@ -30,11 +30,13 @@ export default function Home() {
                 className="block h-52 w-full rounded-t-md object-cover md:h-48"
                 priority
               />
-              <div className="flex justify-between px-3">
-                <p className="text-zinc-800/90">{title}</p>
-                <p className="text-sm text-zinc-700/90">{publishedAt}</p>
+              <div className="flex items-center justify-between px-3">
+                <p>{title}</p>
+                <p className="text-sm text-secondary-foreground">
+                  {publishedAt}
+                </p>
               </div>
-              <p className="line-clamp-2 px-3 text-sm text-zinc-600/90">
+              <p className="line-clamp-2 px-3 text-sm text-muted-foreground">
                 {summary}
               </p>
             </Link>

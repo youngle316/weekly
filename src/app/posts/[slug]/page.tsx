@@ -53,7 +53,7 @@ export default async function Blog({ params }: { params: Params }) {
         <Nav params={params} />
       </aside>
 
-      <div className="prose prose-zinc mx-auto mb-3 px-8 pb-16 pt-6 md:w-full md:max-w-2xl lg:max-w-4xl 2xl:max-w-5xl">
+      <div className="prose prose-zinc mx-auto mb-3 px-8 pb-16 pt-6 dark:prose-invert md:w-full md:max-w-2xl lg:max-w-4xl 2xl:max-w-5xl">
         <PostsContent params={params} />
       </div>
     </div>

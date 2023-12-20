@@ -37,13 +37,12 @@ function Nav({ params }: { params: Params }) {
                 href={`/posts/${href}`}
                 className={`cursor-pointer text-lg ${
                   params.slug === href
-                    ? "text-yellow-700"
-                    : "hover:text-yellow-600"
+                    ? "text-link"
+                    : "hover:text-link hover:underline hover:underline-offset-4"
                 }`}
               >
                 {title}
               </Link>
-              {/*<Separator className="my-1" />*/}
             </div>
           ))}
         </div>
