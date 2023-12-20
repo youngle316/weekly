@@ -16,6 +16,20 @@ module.exports = {
       },
     },
     extend: {
+      typography() {
+        return {
+          zinc: {
+            css: {
+              "--tw-prose-quote-borders": "#1f6feb",
+            },
+          },
+          invert: {
+            css: {
+              "--tw-prose-quote-borders": "#1f6feb",
+            },
+          },
+        };
+      },
       screens: {
         md: "800px",
       },
