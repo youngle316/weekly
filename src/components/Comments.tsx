@@ -10,7 +10,7 @@ import {
 import { useTheme } from "next-themes";
 
 function Comments() {
-  const { theme } = useTheme();
+  const { resolvedTheme } = useTheme();
 
   return (
     <div id="comment" className="mx-auto w-full">
@@ -23,7 +23,9 @@ function Comments() {
         reactionsEnabled="1"
         emitMetadata="0"
         inputPosition="top"
-        theme={theme === "dark" ? "dark_tritanopia" : "light_tritanopia"}
+        theme={
+          resolvedTheme === "dark" ? "dark_tritanopia" : "light_tritanopia"
+        }
         loading="lazy"
         lang="zh-CN"
       />
